@@ -16,6 +16,15 @@ spec:
     spec:
       containers:
       - name: backend-scm
-        image: rodrigogrohl/questcode-backend-scm:0.1.2
+        image: rodrigogrohl/questcode-backend-scm:0.1.1
         ports:
-        - containerPort: 80
+        - containerPort: 3030
+        env:
+        - name: NODE_ENV
+          value: "staging"
+        - name: GITHUB_CLIENT_ID
+          value: "a701f0b93863692e89b3"
+        - name: GITHUB_CLIENT_SECRET
+          value: "353d0a86c1a3a0143ab0bed726f6e7b542c216a7"
+        - name: SECRET_OR_KEY
+          value: "bootcamp18"  
